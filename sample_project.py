@@ -64,6 +64,14 @@ def main():
     # Show your data in line chart
     st.line_chart(ticket_df.Close)
     st.line_chart(ticket_df.Volume)
+
+
+   
+    
+ 
+if __name__ == '__main__':
+    main()
+
     #import required libraries
     import streamlit as st
     import yfinance as yf
@@ -185,14 +193,6 @@ def main():
 
     if __name__ == "__main__":
         main()
-
-   
-    
- 
-if __name__ == '__main__':
-    main()
-
-
 
 
 
