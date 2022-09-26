@@ -7,8 +7,32 @@ st.write("""
 # Financial App
 """)
 
+
+
+
+
+
+
+
+def main():
+    st.title('Search Medium Story')
+    stock = st.text_input('Enter search words:')
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
+
+
+
+
+
 # We will use Amazon stocks
-stock = 'AMZN'
+
 
 # Get stock data
 get_stock_data = yf.Ticker(stock)
