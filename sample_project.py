@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from streamlit.script_request_queue import RerunData
+#from streamlit.script_request_queue import RerunData
 import yahoo_fin.stock_info as si
 import streamlit as st
 from datetime import datetime, timedelta
