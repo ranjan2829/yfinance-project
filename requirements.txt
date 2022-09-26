@@ -2,4 +2,4 @@ pandas
 streamlit
 yfinance
 bs4
-matplotlib
+matplotlib.pyplot
