@@ -3,3 +3,4 @@ streamlit
 yfinance
 bs4
 bandl
+matplotlib
