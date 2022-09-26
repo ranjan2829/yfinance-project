@@ -11,6 +11,20 @@ st.write("""
 
 
 
+from datetime import date
+
+# Returns the current local date
+today = date.today()
+
+
+
+d = st.date_input(
+    "Select the Historical data",
+    date(2019, 7, 6))
+st.write('your selected date is :', d)
+
+
+
 
 
 
@@ -22,7 +36,7 @@ def main():
     get_stock_data = yf.Ticker(stock)
 
     # Set the time line of your data
-    ticket_df = get_stock_data.history(period='1d', start='2021-1-02', end='2021-12-12')
+    ticket_df = get_stock_data.history(period='1d', start=f'{d}', end=f'{today}')
 
     # Show your data in line chart
     st.line_chart(ticket_df.Close)
