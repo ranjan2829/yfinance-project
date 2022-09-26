@@ -105,8 +105,8 @@ def main():
     ticket_df = get_stock_data.history(period='1d', start=f'{d}', end=f'{today}')
 
     # Show your data in line chart
-    st.line_chart(ticket_df.Close)
-    st.line_chart(ticket_df.Volume)
+    st.bar_chart(ticket_df.Close)
+    st.bar_chart(ticket_df.Volume)
 # IMPORT ALL THE REQUIRED LIBRARIES
 
 
