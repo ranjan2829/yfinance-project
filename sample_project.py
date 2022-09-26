@@ -38,8 +38,8 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn-darkgrid')
 
 
-# Set the ticker as 'EURUSD=X'
-forex_data = yf.download('EURUSD=X', start='2019-01-02', end='2021-12-31')
+# Set the ticker as 'EURUSD'
+forex_data = yf.download('EURUSD', start='2019-01-02', end='2021-12-31')
 
 # Set the index to a datetime object
 forex_data.index = pd.to_datetime(forex_data.index)
@@ -68,8 +68,8 @@ plt.show()
 
 
 
-# Set the ticker as 'EURUSD=X'
-forex_data_minute = yf.download('EURUSD=X', period='5d', interval='1m')
+# Set the ticker as 'EURUSD'
+forex_data_minute = yf.download('EURUSD', period='5d', interval='1m')
 
 # Set the index to a datetime object
 forex_data_minute.index = pd.to_datetime(forex_data_minute.index)
@@ -109,8 +109,8 @@ plt.show()
 ax = plt.figure(figsize=(15, 7))
 
 # Plot both forex pairs
-ax = forex_data['EURUSD=X']['Close'].plot(label='EUR/USD')
-ax2 = forex_data['GBPUSD=X']['Close'].plot(secondary_y=True, color='g',  ax=ax, label='GBP/USD')
+ax = forex_data['EURUSD']['Close'].plot(label='EUR/USD')
+ax2 = forex_data['GBPUSD']['Close'].plot(secondary_y=True, color='g',  ax=ax, label='GBP/USD')
 
 # Set the title and axis labels
 plt.title('EUR/USD and GBP/USD Data', fontsize=16)
